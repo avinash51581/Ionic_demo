@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+    <ion-title>Take Photo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+      <ion-list>
+        <ion-list-header>Note:Select Photo from either Camera or Gallery.</ion-list-header>
+        <ion-item>
+            <ion-label>Photo Selection</ion-label>
+              <ion-select placeholder="Select One" value="0" (ionChange)="onSelectPhoto($event)" disabled="{{isPhotoSelectionDisabled}}">
+              <ion-select-option value="C">Camera</ion-select-option>
+              <ion-select-option value="G">Gallery</ion-select-option>
+            </ion-select>
+          </ion-item>
+      </ion-list>
+
+  <div text-center>
+          <ion-icon ios="ios-camera" md="md-camera" (click)="takePhotoFromCamera()" *ngIf="chooseCameraStatus"></ion-icon>
+          <ion-icon ios="ios-image" md="md-image" (click)="takePhotoFromGallery()" *ngIf="chooseGalleryStatus"></ion-icon>
+  </div>
+  <ion-row style="height:20"></ion-row>
+      <img src="{{image}}" width="500" height="300" class="ion-padding">
+</ion-content>

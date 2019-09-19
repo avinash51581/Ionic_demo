@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+       Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button (click)="loadNewPlacePage()" color="primary">Add Place</ion-button>
+  </div>
+</ion-content> -->
+
+
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+    <ion-title>
+      Places
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+<ion-header >
+  <ion-toolbar>
+
+      <!-- <ion-fab-button size="small" slot="start" (click)="loadLandingPage()">
+        <ion-icon name="arrow-back" size="3" color="Light"></ion-icon>
+      </ion-fab-button> -->
+
+      
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-fab-button size="small" slot="end" (click)="loadNewPlacePage()">
+      <ion-icon name="add" size="3" color="Light"></ion-icon>
+    </ion-fab-button>
+
+    <ion-title>Ionic angular GeoLocation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content >
+<ion-list>
+  <ion-item *ngFor="let place of places"  (click)="onOpenMap(place)">{{place.title}}  </ion-item>
+  </ion-list>
+</ion-content>
+
+
+<div class="spinner"></div>
+

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+     
+     <!-- <ion-fab-button size="small" slot="start" (click)="loadLandingPage()">
+      <ion-icon name="arrow-back" size="3" color="Light"></ion-icon>
+    </ion-fab-button> -->
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title> <ion-icon name="contact"></ion-icon>User Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-button color="primary" expand="full" color="primary" (click)="downloadUserList()">Download and View User List</ion-button>
+    </ion-col>
+    <!-- <ion-col>
+      <ion-button color="primary" expand="full" color="primary" (click)="displayUsers()">Display Users</ion-button>
+    </ion-col> -->
+
+  </ion-row>
+<!-- 
+  <ion-list>
+      <ion-list-header>
+          <ion-label>First Name</ion-label>
+          <ion-label>Last Name</ion-label>
+          <ion-label>Email</ion-label>
+          <ion-label>Mobile</ion-label>
+        </ion-list-header>
+
+      <ion-item *ngFor="let usrlst of userList">{{usrlst.firstName}}{{usrlst.lastName}}{{usrlst.email}}{{usrlst.mobile}}   </ion-item>
+      </ion-list> -->
+    
+
+      <table class="table" style="border:1px solid black;">
+          <thead>
+              <tr>
+                  <td><b>FName</b></td>
+                  <td><b>LName</b></td>
+                  <td><b>Email</b></td>
+                  <td><b>Mobile</b></td>
+                  <!-- <td><b>Delete</b></td> -->
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let usrlst of userList">
+                  <td>{{usrlst.firstName}}</td> 
+                  <td>{{usrlst.lastName}}</td> 
+                  <td>{{usrlst.email}}</td> 
+                  <td>{{usrlst.mobile}}</td> 
+                  <!-- <td><button class="btn btn-primary btn-xs" (click)="deleteuser(usrlst.id)">Delete</button></td> -->
+              </tr>
+          </tbody>
+      </table>
+
+
+
+</ion-content>

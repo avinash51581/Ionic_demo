@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-fab-button size="small" slot="start" (click)="backToMainPage()">
+        <ion-icon name="arrow-back" size="3" color="Light"></ion-icon>
+      </ion-fab-button> -->
+
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+
+        
+  <ion-title>Google Map</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- <agm-map [(latitude)]="lat" [(longitude)]="lng">
+        <sebm-google-map-marker [(latitude)]="lat" [(longitude)]="lng"></sebm-google-map-marker>
+      </sebm-google-map> -->
+
+      <agm-map [(latitude)]="lat" [(longitude)]="lng">
+          <agm-marker [(latitude)]="lat" [(longitude)]="lng"></agm-marker>
+        </agm-map>
+      
+
+
+<!-- <ion-button color="danger" text-center (click)="onDismiss()">Dismiss</ion-button>  -->
+</ion-content>

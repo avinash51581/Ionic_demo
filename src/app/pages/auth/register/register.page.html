@@ -1,0 +1,43 @@
+<ion-header >
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+        
+    <ion-title>  <ion-icon md="md-person-add"></ion-icon> Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+    <ion-content padding>
+      <form  [formGroup]="userRegistrationForm">
+        <ion-item>
+            <ion-label position="floating">First Name</ion-label>
+            <ion-input formControlName="firstName"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input formControlName="lastName"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Mobile</ion-label>
+          <ion-input formControlName="mobile"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+      
+        <ion-button type="submit" expand="full" color="danger" (click)="register()">Register</ion-button>
+      </form>
+      <p text-center>Already have a account?</p>
+      <ion-button expand="full" color="primary" (click)="loginModal()">Login</ion-button>
+    </ion-content>  

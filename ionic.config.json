@@ -1,0 +1,7 @@
+{
+  "name": "NABARD",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

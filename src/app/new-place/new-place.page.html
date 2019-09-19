@@ -1,0 +1,42 @@
+
+
+<ion-header>
+    <ion-toolbar>
+        <!-- <ion-fab-button size="small" slot="start" (click)="backToMainPage()">
+            <ion-icon name="arrow-back" size="3" color="Light"></ion-icon>
+          </ion-fab-button> -->
+
+            <ion-buttons slot="start">
+              <ion-back-button></ion-back-button>
+            </ion-buttons>
+
+      <ion-title>Locate Current Location</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content class="ion-padding">
+  <form text-center (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+
+      <ion-input type="text" name="title" ngModel required>
+      </ion-input>
+    </ion-item>
+        <ion-button block (click)="onLocateuser()" color="primary">Locate me</ion-button>
+        <ion-button block type="submit"  color="primary" [disabled]="!f.valid">Add Place</ion-button>
+      
+        <!-- <ion-button block type="submit" class="ion-padding" [disabled]="!f.valid" >Add Place</ion-button> -->
+        
+  </form>     
+
+  <!-- <ion-grid>
+    <ion-row>
+        <ion-col text-center ><ion-button block (click)="onLocateuser()" color="primary">Locate me</ion-button></ion-col>  
+    </ion-row>
+
+
+  </ion-grid> -->
+
+  
+</ion-content>
